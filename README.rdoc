@@ -15,43 +15,34 @@ this a full-featured, well rounded gem (tests, enhanced docs, etc.)
 
 == Install
 
-<tt>
-$ git clone git://github.com/harmon/hobo-permissions.git
+	$ git clone git://github.com/harmon/hobo-permissions.git
 
-$ cd hobo-permissions
+	$ cd hobo-permissions
 
-$ sudo gem install --local ./pkg/hobo-permissions-0.1.0.gem
-</tt>
+	$ sudo gem install --local ./pkg/hobo-permissions-0.1.0.gem
 
 or this might work, too:
-<tt>
-$ sudo rake install
-</tt>
+
+	$ sudo rake install
 
 In your RAILS_ROOT/config/environment.rb file:
 
-<tt>
-Rails::Initializer.run do |config|
-  	config.gem 'hobo-permissions',
-		:lib => 'hobo/permissions',
-    	:version => '>= 0.1.0'
-end
-</tt>
+	Rails::Initializer.run do |config|
+  		config.gem 'hobo-permissions',
+			:lib => 'hobo/permissions',
+    		:version => '>= 0.1.0'
+	end
 
 Now, in your ActiveRecord::Base model, just include it!
-<tt>
 
-class Article < ActiveRecord::Base
-	include Hobo::Permissions
-end
-</tt>
+	class Article < ActiveRecord::Base
+		include Hobo::Permissions
+	end
 
 And now you can do stuff like:
 
-<tt>
-Article.user_new(@current_user, params[:article])
-#=> #<Article name: 'Jesus Walks on Ice, Kid still drowns.', user_id: 23>
-</tt>
+	Article.user_new(@current_user, params[:article])
+	#=> #<Article name: 'Jesus Walks on Ice, Kid still drowns.', user_id: 23>
 
 
 
