@@ -3,7 +3,7 @@
 == Version: 0.1.0
 
 This is the Permissions module extracted out of the Hobo framework and packaged
-into it's own gem for use in your project.
+into it's own gem for use in your Ruby on Rails project.
 
 Currently I do not have this available on a Gem server as it's in beta, but you
 can `git clone` and `sudo rake install` to place it in your gems folder. Be sure to
@@ -12,6 +12,48 @@ use `sudo` or else it will install into ~/.gem, which is never a good thing :)
 Big shoutout to Tom Locke & co. for making Hobo awesome enough that I can 
 do this! Hopefully I will get some feedback from them regarding making
 this a full-featured, well rounded gem (tests, enhanced docs, etc.)
+
+== Install
+
+<tt>
+$ git clone git://github.com/harmon/hobo-permissions.git
+
+$ cd hobo-permissions
+
+$ sudo gem install --local ./pkg/hobo-permissions-0.1.0.gem
+</tt>
+
+or this might work, too:
+<tt>
+$ sudo rake install
+</tt>
+
+In your RAILS_ROOT/config/environment.rb file:
+
+<tt>
+Rails::Initializer.run do |config|
+  	config.gem 'hobo-permissions',
+		:lib => 'hobo/permissions',
+    	:version => '>= 0.1.0'
+end
+</tt>
+
+Now, in your ActiveRecord::Base model, just include it!
+<tt>
+
+class Article < ActiveRecord::Base
+	include Hobo::Permissions
+end
+</tt>
+
+And now you can do stuff like:
+
+<tt>
+Article.user_new(@current_user, params[:article])
+#=> #<Article name: 'Jesus Walks on Ice, Kid still drowns.', user_id: 23>
+</tt>
+
+
 
 == TODO
 
