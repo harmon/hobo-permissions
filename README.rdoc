@@ -1,6 +1,11 @@
-= gem
+= Hobo::Permissions
 
-Description goes here.
+This is the Permissions module extracted out of the Hobo framework and packaged
+into it's own gem for use in your project.
+
+Currently I do not have this available on a Gem server as it's in beta, but you
+can `git clone` and `sudo rake install` to place it in your gems folder. Be sure to
+use `sudo` or else it will install into ~/.gem, which is never a good thing :)
 
 == Note on Patches/Pull Requests
  
@@ -15,4 +20,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2009 Adam Grant. See LICENSE for details.
+Copyright (c) 2009 Tom Locke, Adam Grant. See LICENSE for details.
