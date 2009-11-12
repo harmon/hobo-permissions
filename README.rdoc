@@ -1,11 +1,28 @@
 = Hobo::Permissions
 
+== Version: 0.1.0
+
 This is the Permissions module extracted out of the Hobo framework and packaged
 into it's own gem for use in your project.
 
 Currently I do not have this available on a Gem server as it's in beta, but you
 can `git clone` and `sudo rake install` to place it in your gems folder. Be sure to
 use `sudo` or else it will install into ~/.gem, which is never a good thing :)
+
+Big shoutout to Tom Locke & co. for making Hobo awesome enough that I can 
+do this! Hopefully I will get some feedback from them regarding making
+this a full-featured, well rounded gem (tests, enhanced docs, etc.)
+
+== TODO
+
+* Add tests from Hobo, stripped down for just this module.
+* Verify that association_permissions.rb actually works (haven't tested it yet in a real project)
+* Ooooooo, a wiki! Me likey...
+
+== Want to Help?
+
+I JUST started this gem (my first one!), and I JUST started using Hobo.
+Fork me and send a pull request to get this ball rolling!
 
 == Note on Patches/Pull Requests
  
@@ -14,8 +31,7 @@ use `sudo` or else it will install into ~/.gem, which is never a good thing :)
 * Add tests for it. This is important so I don't break it in a
   future version unintentionally.
 * Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
 == Copyright
